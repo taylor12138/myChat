@@ -1,5 +1,5 @@
 <template>
-  <div id="board">board</div>
+  <div id="board">该功能暂未开放，敬请期待！！</div>
 </template>
 
 <script>

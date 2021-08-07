@@ -108,7 +108,7 @@ export default {
       emojiList: [], //表情包列表
       content: "",
       chatContent: [], //type： 1自己信息  2别人的信息 3.离开/进入聊天室
-      baseURL: "http://localhost:5208/",
+      baseURL: "http://47.113.117.158:5208/",
       showEmoji: false, //是否显示表情包
     };
   },

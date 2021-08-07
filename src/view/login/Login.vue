@@ -72,10 +72,7 @@ export default {
             trigger: "blur",
           },
         ],
-        phone: [
-          { required: true, message: "请输入手机号码", trigger: "blur" },
-          { type: "number", message: "手机格式输入有误" },
-        ],
+        phone: [{ required: true, message: "请输入手机号码", trigger: "blur" }],
       },
     };
   },
@@ -120,6 +117,7 @@ export default {
       const { err_code } = res.data;
       switch (err_code) {
         case 1:
+        case 3:
           this.$message.error("用户名、手机号或密码错误");
           this.ruleForm.username = "";
           this.ruleForm.phone = "";

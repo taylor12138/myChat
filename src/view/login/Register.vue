@@ -83,10 +83,7 @@ export default {
           },
         ],
         checkPass: [{ required: true, message: "请确认密码", trigger: "blur" }],
-        phone: [
-          { required: true, message: "请输入手机号码", trigger: "blur" },
-          { type: "number", message: "手机格式输入有误" },
-        ],
+        phone: [{ required: true, message: "请输入手机号码", trigger: "blur" }],
       },
     };
   },
@@ -124,6 +121,7 @@ export default {
       const { err_code } = res.data;
       switch (err_code) {
         case 1:
+        case 3:
           this.$message.error("当前用户名或手机号已注册");
           this.ruleForm.username = "";
           this.ruleForm.phone = "";

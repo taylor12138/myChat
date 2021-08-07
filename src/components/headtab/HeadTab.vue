@@ -49,10 +49,18 @@
             当前登录用户: <br />
             {{ $store.state.username }}
           </li>
-          <li><img src="~@/assets/img/info.png" alt="" /> 个人资料</li>
-          <li><img src="~@/assets/img/safe.png" alt="" />账号安全</li>
-          <li><img src="~@/assets/img/message.png" alt="" />我的消息</li>
-          <li><img src="~@/assets/img/out.png" alt="" />退出登录</li>
+          <li @click="noOpening">
+            <img src="~@/assets/img/info.png" alt="" /> 个人资料
+          </li>
+          <li @click="noOpening">
+            <img src="~@/assets/img/safe.png" alt="" />账号安全
+          </li>
+          <li @click="noOpening">
+            <img src="~@/assets/img/message.png" alt="" />我的消息
+          </li>
+          <li @click="noOpening">
+            <img src="~@/assets/img/out.png" alt="" />退出登录
+          </li>
         </ul>
       </div>
     </div>
@@ -77,6 +85,12 @@ export default {
   components: {
     TabBar,
     TarBarItem,
+  },
+  methods: {
+    noOpening() {
+      console.log("something");
+      this.$message("该功能暂未开放，敬请期待！");
+    },
   },
 };
 </script>
